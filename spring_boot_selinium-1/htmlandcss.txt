@@ -1,0 +1,94 @@
+Page1.html
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Page1</title>
+  </head>
+  <body>
+    <h2>My 2nd Page</h2>
+    <a href="index.html"> Back </a>
+
+    <script src="myjs.js"></script>
+    <h1 id="new-content"></h1>
+    <button onclick="changeContent()">change</button>
+    <h1 class="cls">Hello World</h1>
+    <h1 class="cls">Hello World</h1>
+    <h1 class="cls">Hello World</h1>
+
+    <h3 id="id3"></h3>
+    <button onclick="changeStyle()">change style</button>
+    <script src="my.js"></script>
+  </body>
+</html>
+
+
+
+my.js
+
+document.getElementById("new-content").innerHTML = "kjsbcjkweb";
+
+var n = prompt("Enter the number");
+document.writeln(n);
+var a = parseInt(n);
+
+if (a > 0) {
+  document.writeln(a);
+}
+document.writeln(a);
+
+function sayHello() {
+  document.writeln("Hi Intuit");
+}
+
+sayHello();
+
+function changeContent() {
+  var elem = document.getElementById("new-content");
+  elem.innerHTML = "this is the DOM content";
+  elem.style.color = "red";
+}
+
+let ele = document.getElementsByClassName("cls");
+console.log(ele);
+for (let eachone of ele) {
+  eachone.style.color = "blue";
+}
+
+let elk = document.querySelector(".cls");
+console.log(elk);
+elk.style.color = "green";
+
+let els = document.querySelectorAll(".cls");
+for (let anyone of els) {
+  anyone.style.color = "grey";
+}
+
+let elb = document.getElementById("id3");
+elb.innerText = "javascript is not case sensitive";
+var changeStyle = () => {
+  elb.style.color = "yellow";
+  elb.style.backgroundColor = "#e2e2e2";
+  elb.style.border = "40px";
+};
+
+
+myjs.js
+
+//alert("this is the alert message");
+//window.alert("This is the second alert meassage");
+document.write("<strong>JS Page</strong>", "<br>");
+//document.write(prompt("enter the name"));
+//var username = prompt("enter the name");
+//document.write(username);
+
+document.write(confirm("exit or not"), "<br>");
+
+var ob = { name: "vali" };
+document.write(typeof ob, "<br>", ob.name.length, "<br>", ob["name"]);
+
+
+
