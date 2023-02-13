@@ -1,0 +1,25 @@
+create database selenium;
+use selenium;
+
+create table employeeinfo(id int,name varchar(20),location varchar(20),age int);
+
+describe employeeinfo;
+
+insert into employeeinfo values(1,'sam','newjersey',21);
+insert into employeeinfo values(2,'ram','newyork',22);
+insert into employeeinfo values(3,'tam','florida',23);
+insert into employeeinfo values(4,'nam','charlotte',24);
+insert into employeeinfo values(5,'lam','texas',25);
+
+select * from employeeinfo;
+select * from employeeinfo where id=4;
+
+alter table employeeinfo
+add password varchar(10);
+
+alter table employeeinfo
+add constraint Myprimarykey primary key(id);
+
+UPDATE employeeinfo
+SET password='abcd@1234'
+WHERE id=4;
