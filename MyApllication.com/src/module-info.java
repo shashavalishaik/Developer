@@ -1,0 +1,2 @@
+module MyApllication.com {
+}
